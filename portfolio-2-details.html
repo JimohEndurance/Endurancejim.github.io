@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Jimoh Analytics</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.8.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dashboard.PNG" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/heatmap.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/cloud.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Data Analysis</li>
+                <!--<li><strong>Client</strong>: ASU Company</li>-->
+                <li><strong>Project date</strong>: 01, August 2022</li>
+                <li><strong>GitHub URL</strong>: <a href="https://github.com/JimohEndurance/Stack-Overflow-2017-Developer-Survey-Data-Analysis">GitHub project page</a></li>
+                <li><strong>Tableau URL</strong>: <a href="https://public.tableau.com/app/profile/jimoh.endurance/viz/starkoverflow/Dashboard1?publish=yes">Tableau Dashboard</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+             <!--<h4>Introduction</h4>-->
+              <p>
+                 Stack Overflow is an online question-and-answer site for programmers. Started in fall 2008,
+                  its rich feature set brought rapid popularity: users can ask and answer questions, collaboratively
+                  tag and edit questions, vote on the quality of answers, and post comments on individual questions and answers.
+                 The stack overflow survey is an annual survey that  examines all aspects of a developers’ experience such as favorite technologies, 
+                  work preferences, career satisfaction and education background. With nearly 60K responses from more than 170 countries. 
+              </p>
+              <h3>Basis</h3>
+              <p>
+                   What are the most popular IDEs? What aspects do software developers pay attention to when applying for a new job? 
+                   What determines people’s job satisfaction? To answer these questions, 
+                   I dug into the 2017 Stack Overflow survey and discovered some interesting results.
+                   I choose the 2017 survey instead of the latest one because it contains more relevant numerical information 
+                   which I can use to perform model analysis. The survey was sent out to over 60k developers around the world through
+                   sites related to Stack Overflow, and the response rate was around 57%.
+                   <b>Here are a few things I wanted to find out about the survey:</b>
+             </p>
+            <ul>
+                  <li>
+                       <p>
+                              The demographic of the respondents and the spread of programming community across different geographical location.
+                      </p>
+                 </li>
+                 <li>
+                       <p>
+                             	What kind of programming skills, experience, and preferences is distributed across the globe.
+                      </p>
+                 </li>
+                 <li>
+                       <p>
+                             	Salaries analysis of respondent.
+                      </p>
+                 </li>
+           </ul>
+           <p>
+               I also threw in a Tableau dashboard into the mix to allow you to explore the results of my analysis by Country
+          </p>
+
+          <h3>Libraries/Tools Used In Exploration:</h3>
+          <p> 
+                  The analysis was carried out using python and python libraries such as
+                   NumPy and pandas to get the desired data by doing altercation and manipulation on the data, 
+                   GEOPY for location geocoding, seaborn and matplotlib for visualization and also made uses of other 
+                   built in library as shown in my Jupiter Notebook
+            </p>
+
+            <h3>Data Cleaning and Processing</h3>
+            <p>
+                  A vast amount of Data scientist or analyst time revolves around this step 
+                  cause missing values are always a big issues to data project. 
+                  All the "NAN" value in this data were not drop at once cause this will affect the
+                 data significantly. hence some column "NAN" will be replace by the mean of the column
+                 data while some will be drop. For example , the “NAN “ value in the column “country” 
+                 were replaced with United States(the country with the highest number of Respondents) 
+                 because dropping all the NAN value in this column will affect the data tremendously, 
+                also the NAN value in the column “Salary” were replaced with the average of the salaries. 
+            </p>
+             <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/notebook.png" alt=""> 
+              <br>
+              <br>
+             <h3>Exploratory Analysis and Visualization:</h3>
+             <p>Before deep diving into our exploratory analysis and visualization , let’s take a look at our Location Geocoding.</p>
+           
+             <h4> Location Geocoding:</h4>
+             <p> For my final dashboard, I wanted to add a map that shows the developer data in each country. 
+                     To do that, Tableau needs basic geographic information. To further retrieve my longitude and 
+                      Latitude data from each country, I made use of GEOPY, a library in python that takes a country name
+                     as input and produce the corresponding longitude and Latitude as output. from our data cleaning we 
+                    see that United States has the highest number of count value, hence I replace all the row in the country 
+                    column with data that can not be analyze by  geopy to produce Latitude and Longitude with United States.
+            </p>
+
+            <h4>Exploratory</h4>
+            <p>we needed to ask interesting questions about the survey responses,
+                   as this would help to understand what the demographics i.e. country, 
+                   age, gender, education level, employment level, etc. of the respondents look like. 
+            </p>
+
+           <h4>Country</h4>
+          <p>
+                Let's look at the number of countries from which there are responses in the survey, and plot the 15 countries with the highest number of responses.
+          </p> 
+           <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/treemap.png" alt=""> 
+            <br>
+           <p>It  appears the that a disproportionately high number of respondents are from USA & India — which one might expect since these countries have the highest populations (apart from China) .  </p>        
+
+          <h4>Gender</h4>
+          <p>
+                Let’s look at the distribution of responses for the Gender. It’s a well-known fact that women
+                and non-binary genders are underrepresented in the programming community, so we might expect to 
+                see a skewed distribution here..
+          </p> 
+           <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/gender.png" alt=""> 
+            <br>
+           <p>
+                 Only about 8.5% of survey respondents who have answered the question identity as women 
+                 or non-binary. This number is lower than the overall percentage of women & non-binary genders
+                 in the programming community which is estimated to be around 12%.  
+             </p>            
+             
+            <h4>Education Level</h4>
+          <p>
+                Formal education in computer science is often considered an important requirement of becoming 
+	            a programmer. Let’s see if this indeed the case, especially since there are many free resources & tutorials 
+		        available online to learn to program.
+          </p> 
+           <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/education.png" alt=""> 
+            <br>
+           <p>
+                  It   appears that well over half of the respondents hold a bachelor’s or master’s degree,
+	               so most programmers definitely seem to have some college education, although it’s not clear
+		           from this graph alone if they hold a degree in computer science.  
+             </p>        
+             <p>  Let’s analyze what’s the primary field of study among the respondent</p>    
+             <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/edu_level.png" alt=""> 
+            <p>It turns that a good numbers  of programmers holding a college degree have a field of 
+                   study other than computer science — which is very encouraging. This seems to suggest 
+                   that while a college education is helpful in general, you do not need to pursue a major in computer 
+                   science to become a successful programmer.
+            </p>
+
+           <h4>Most popular programming languages in 2017</h4>
+          <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/programming_level.png" alt="">
+          <p>
+                Perhaps not surprising  Javascript C#,  Javascript and SQL comes out at the top as it is the  most sought 
+                skills today and it’s also happened to be one of the easiest to get started with. SQL is necessary for working
+                with relational databases, so it’s no surprise that most programmers work with SQL on a regular basis.
+                For other forms of development, java seems to be the popular choice in 2017 as Java, which was the industry standard for server &    application development for over 2 decades
+          </p>  
+            <br>
+   
+         <h4>Languages used by data scientists</h4>
+        <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/data_scientist.png" alt="">
+          <p>
+                no surprise that the majority of them use python and at second position SQL
+               for data science/analysis  and recently javascript has also been gaining importance in data science.
+          </p>  
+            <br>
+
+         <h4>Average salaries of developers</h4>
+       <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/avg_salary.png" alt="">
+          <p>
+                Average Salaries of developers range between
+               175k to 200k and it’s not surprising that C++, C#, 
+               JavaScript, Python and Typescript are the highest because
+                they are the most sort after skill in a developer in the tech world 
+          </p>  
+            <br>
+
+         <h4>Salaries model analysis</h4>
+        <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/heatmap.png" alt="">
+          <p>
+                In order to carry out the salary model analysis based on the numerical details provided in the 2017 developers survey ,
+                I first of all did a heat map chart to find the correlation between all the numerical variables and from the chart ,
+                it is evident that CareerSatisfaction with a correlation Salary fit of 0.08 is the best fit according to the data to predict programmer's salaries.
+          </p>  
+          <ul>
+                 <li>
+                    <i>
+                         	I made used of <b><i>simple linear regression model</i></b>  which gave a prediction fit of  Salary = 33382.80846157742 + 2788.3408063 * CareerSatisfaction.
+                     </i>
+                </li>
+               <br>
+             <li>
+                    <i>
+                         	I also made used of <b><i>multiple linear regression model</i></b> which gave a prediction fit of Salary = 60439.94008888537 + 3469.89263979CareerSatisfaction -610.08510888JobSatisfaction -818.51499385HoursPerWeek -3059.47010683StackOverflowSatisfaction
+                     </i>
+                </li>
+               <br>
+               <li>
+                    <i>
+                         	I also carried out a <b><i>polynomial model </i></b>analysis on salaries prediction
+                     </i>
+                </li>
+               </ul>
+              <p>  After further analysis, evaluation and  Comparing these three models with <b><i>R-square</i></b> and <b><i>Mean-Square-Error </i></b>evaluation , i came to the conclusion that <b><i>multiple linear regression model</i></b> is the best model to be able to predict salary from values given in our dataset.</p>
+               <br>
+
+           <h4>Word frequency in "StackOverflowDescribe" column </h4>
+        <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/cloud.png" alt="">
+          <p>
+                For this part of the analysis, I used the WordCloud library to generate a Word Cloud image based on the frequency of words 
+                used in the column. The Word Cloud shows   the words with a higher frequency in larger text sizes.
+          </p>  
+            <br>
+
+           <h4>Interactive Tableau Dashboard </h4>
+        <img style= " width: 100%;  height:50%;"  src="assets/img/portfolio/dashboard.png" alt="">
+          <p>
+                To help readers explore my analysis to a greater depth, I made use of Tableau to create a user-friendly interactive <a href="https://public.tableau.com/app/profile/jimoh.endurance/viz/starkoverflow/Dashboard1?publish=yes">dashboard</a>. This allows you to explore the results by Country and  so much  
+                 more. Please note that while the dashboard can be viewed on any device, it is preferable to view it with a Tablet or a Computer.
+          </p>  
+            <br>
+
+           <h4>Inference and Conclusion</h4>
+           <p>
+                We’ve drawn many interesting inferences from the survey, here’s a summary of the few of them:
+           </p>
+           <ul>
+                 <li>
+                    <i>
+                         	Based on the demographics of the survey respondents, we can infer that the survey is somewhat representative of the overall programming community, although it definitely has fewer responses from programmers who are women & non-binary genders.
+                     </i>
+                </li>
+               <br>
+              <li>
+                    <i>
+                         	Most programmers hold a college degree, although a fairly large percentage did not have computer science as their major in college, so a computer science degree isn’t compulsory for learning to code or building a career in programming.
+                     </i>
+                </li> 
+                <br>
+                 <li>
+                      <i>
+                           JavaScript, C#, Java and SQL were the most used languages by professional developer, followed by python  in 2017.
+                      </i>
+                 </li>
+                <br>
+                <li>
+                      <i>
+                           The average salaries range is between ~150K to ~180K. Most popular languages as JavaScript, C#, Java, SQL and Python we found in the first question seem to be in the middle of the range, and that’s expected! because the more people who knows that language mean less rareness. 
+                      </i>
+                 </li>
+                <br>
+                 <li>
+                      <i>
+                           From the model analysis of Salary prediction from the given numerical data in the 2017 dataset , it was shown that CareerSatisfaction has the highest correlation fit with salary and multiple linear regression model is the best fit to predict salary of developers from the given data. . 
+                      </i>
+                 </li>
+                  </ul>
+
+               <h4>REMARK</h4>
+             <p>
+                   All the references used were hyperlinked within the article. For the complete Python code written on Jupyter Notebook, GitHub, Tableau Dashboard and my social media pages, please use the links below:
+             </p>
+               <ul>
+                    <br>
+                     <li>
+                           <a href="https://public.tableau.com/app/profile/jimoh.endurance/viz/starkoverflow/Dashboard1?publish=yes">Tableau Dashboard</a>
+                     </li>
+                     <br>
+                     <li>
+                           <a href="https://github.com/JimohEndurance/Stack-Overflow-2017-Developer-Survey-Data-Analysis">GitHub Respository</a>
+                     </li>
+                     <br>
+                     <li>
+                           <a href="https://www.linkedin.com/in/jimoh-endurance-949a0a231">Linkedin</a>
+                     </li>
+                     <br>
+                     <li>
+                           <a href="https://mobile.twitter.com/eddygonero">Twitter</a>
+                     </li>
+              </ul>
+
+    
+          </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+
+
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
